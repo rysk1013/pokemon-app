@@ -1,0 +1,13 @@
+.card {
+  width: 290px;
+  box-shadow: 2px 8px 21px -2px #777777;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.cardName {
+  padding: 0;
+  font-size: 20px;
+  margin-bottom: 10xp;
+  margin-top: 0;
+}
