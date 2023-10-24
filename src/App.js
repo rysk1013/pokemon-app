@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getAllPokemon, getPokemon } from "./utils/pokemon";
 import "./App.css";
 import Card from "./components/Card/Card";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   // エンドポイント
@@ -36,17 +37,20 @@ function App() {
   console.log(pokemonData);
 
   return (
-    <div className="App">
-      {loading ? (
-        <h1>ロード中・・・</h1>
-      ) : (
-        <div className="pokemonCardContainer">
-          {pokemonData.map((pokemon, i) => {
-            return <Card key={i} pokemon={pokemon} />;
-          })}
+    <>
+      <Navbar />
+      <div className="App">
+        {loading ? (
+          <h1>ロード中・・・</h1>
+        ) : (
+          <div className="pokemonCardContainer">
+            {pokemonData.map((pokemon, i) => {
+              return <Card key={i} pokemon={pokemon} />;
+            })}
+          </div>
+        )}
         </div>
-      )}
-    </div>
+      </>
   );
 }
 
